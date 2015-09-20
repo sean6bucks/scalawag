@@ -1,9 +1,9 @@
 /*
-	Theme Name: HTML5 Blank
-	Theme URI: http://html5blank.com
-	Description: HTML5 Blank WordPress Theme
-	Version: 1.4.3
-	Author: Todd Motto (@toddmotto)
+	Theme Name: Scalawag
+	Theme URI: http://www.github.com/sean6bucks
+	Description: SCLWG Magazine
+	Version: 1.0.0
+	Author: MisterBaby
 	Author URI: http://toddmotto.com
 	Tags: Blank, HTML5, CSS3
 
@@ -64,10 +64,7 @@ a:hover,
 a:active {
 	outline:0;
 }
-input:focus {
-	outline:0;
-	border:1px solid #04A4CC;
-}
+
 
 /*------------------------------------*\
     STRUCTURE
@@ -152,12 +149,48 @@ input:focus {
 	    line-height: 18pt;
 	}
 
-
 	#site-wrapper {
-	    padding: 20px 20px;
+	    padding: 0px 20px;
 	    max-width: 900px;
 	    min-width: 750px;
 	    margin: 0 auto;
+	}
+
+	/*HEADER*/
+	/*---------------------------------*/
+	header {
+		height: 45px;
+	}
+
+	.search {
+		float: right;
+		height: 45px;
+		vertical-align: top;
+	}
+
+	.search-input{
+		display: inline-block;
+		width: 200px;
+		font-family: Helvetica, sans-serif;
+		font-size: 18px;
+		appearance: none;
+		box-shadow: none;
+		border-radius: none;
+		margin: 10px;
+		border: none;
+		border-bottom: solid 2px #EFEFEF;
+		transition: border 0.3s;
+		vertical-align: top;
+	}
+
+	.search-input:focus {
+		outline: none;
+		border-bottom: solid 2px #B3B3B3;
+	}
+
+	.search-submit {
+		height: 25px;
+		margin: 10px 0;
 	}
 
 	/*JUMBOTRON SLIDER*/
@@ -165,8 +198,50 @@ input:focus {
 
 	#jumbotron-wrapper {
 	    height: 350px;
-	    /*margin-bottom: 20px;*/
 	    background: black;
+		overflow: hidden;
+		position: relative;
+
+	}
+
+	.featured-post {
+		width: 100%;
+		min-width: 900px;
+		margin: 0 auto;
+		position: absolute;	
+	}
+
+	.featured-headline {
+	    color: white;
+	    font-size: 40px;
+	    position: absolute;
+  		text-align: center;
+		z-index: 1;
+		left: 0;
+	    top: 125px;
+	    width: 100%
+	}
+
+	.featured-image {
+		z-index: 0;
+		margin-top: -50px;
+		-webkit-transition: opacity 0.5s ease-in-out;
+		   -moz-transition: opacity 0.5s ease-in-out;
+		    -ms-transition: opacity 0.5s ease-in-out;
+		     -o-transition: opacity 0.5s ease-in-out;
+		transition: opacity 0.5s ease-in-out;
+	}
+	
+	.featured-image:hover{
+		opacity: 0.75;
+	}
+
+	.slide{
+		display: none;
+	}
+
+	.main-slide {
+		display: inherit;
 	}
 
 	/*PAGES SECTION*/
@@ -187,13 +262,11 @@ input:focus {
 	}
 
 	.page-title {
-	    position: absolute;
-	    top: 50%;
-	    left: 50%;
-	    transform: translate(-50%, -50%);
 	    font-family:  "Babas Neue Regular", Helvetica, sans-serif;
 	    font-size: 25px;
-	    text-align: center; 
+	    line-height: 0px;
+	    text-align: center;
+	    margin: 50% auto; 
 	}
 
 
@@ -239,6 +312,7 @@ input:focus {
 	    height: 250px;
 	    display: inline-block;
 	    vertical-align: top;
+	    position: relative;
 
 	}
 
@@ -254,6 +328,12 @@ input:focus {
 	    margin: 25px;
 	}
 
+	.preview-details {
+		margin-left: 25px;
+		position: absolute;
+		bottom: 10px;
+	}
+
 
 
 	/* FOOTER */
@@ -261,6 +341,9 @@ input:focus {
 
 	footer {
 	    width: 100%;
+	    font-size: 12px;
+	    font-family: Helvetica, sans-serif; 
+	    line-height: 20px;
 	}
 
 	#footer-icon {
@@ -272,9 +355,6 @@ input:focus {
 
 	#footer-text {
 	    border-top: dotted 1px black;
-	    font-size: 12px;
-	    font-family: Helvetica, sans-serif; 
-	    line-height: 20px;
 	}
 
 	#footer-table {
@@ -292,6 +372,12 @@ input:focus {
 
 	.centered {
 	    text-align: center;
+	}
+
+	.copyright{
+		margin-bottom: 0; 
+		font-size: 12px;
+	    font-family: Helvetica, sans-serif;
 	}
 
 
@@ -430,6 +516,7 @@ a img.aligncenter {
 	a[href^="#"]:after {
 		content:"";
 	}
+
 	pre,blockquote {
 		border:1px solid #999;
 		page-break-inside:avoid;

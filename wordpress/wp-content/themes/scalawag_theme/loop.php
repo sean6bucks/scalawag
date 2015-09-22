@@ -4,9 +4,13 @@
     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
     
     <!-- post thumbnail -->
-    <?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
-        <div class="article-preview-image">
-            <?php the_post_thumbnail(array(700, 500)); // Declare pixel size you need inside the array ?>
+    <?php if ( has_post_thumbnail()) : 
+    $post_image_id = get_post_thumbnail_id($post_to_use->ID);
+        if ($post_image_id) {
+            $thumbnail = wp_get_attachment_image_src( $post_image_id, 'post-thumbnail', false);
+            if ($thumbnail) (string)$thumbnail = $thumbnail[0];
+        } ?>
+        <div class="article-preview-image" style="background-image: url('<?php echo $thumbnail; ?>');">
         </div>
     <?php else: ?>
         <div class="preview-image"></div>
@@ -14,7 +18,7 @@
     <!-- /post thumbnail -->
     <div class="article-preview-body">
         <!-- post title -->
-        <h3 class="article-preview-headline"><?php the_title(); ?></h3>
+        <h4 class="article-preview-headline"><?php the_title(); ?></h4>
         <!-- /post title -->
 
         <!-- post excerpt -->

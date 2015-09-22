@@ -1,38 +1,30 @@
+			
+		</div>
+		<!-- /wrapper -->
 			<!-- footer -->
 			<footer class="footer" role="contentinfo">
-				<div id="footer-icon"></div>
-		        <div id="footer-text">
-		            <table id="footer-table">
-		              <tr>
-		                <td class="column left-align">about</td>
-		                <td class="column centered">contact</td> 
-		                <td class="column centered">social</td>
-		              </tr>
-		              <tr>
-		                <td class="left-align">RSS</td>
-		                <td class="centered">info@brothersscalawag.com</td> 
-		                <td class="centered">[tw] [in]</td>
-		              </tr>
-		              <tr>
-		                <td class="left-align">newsletter</td>
-		                <td></td>
-		                <td></td>
-		            </table>
-		            <!-- copyright -->
-					<p class="copyright">
-						&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. 
-					</p>
-				<!-- /copyright -->
-		        </div> 
+		        <div id="footer-body">
+		        	<div class="about">
+						<h4 class="footer-title">ABOUT US</h4>
+						<p class="footer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		        	</div><!--
+		        	--><div class="contact">
+						<h4 class="footer-title">CONTACT US</h4>
+						<p class="footer-text">info@SCLWG.com<br>
+						---<br>
+						on Twitter<br>
+						on Facebook<br>
+						on Instagram</p>
+					</div><!--
+		  			--><img src="<?php echo get_template_directory_uri(); ?>/img/footer_jack.png" id="footer-icon" alt="brothers scalawag jackalope" />
+		  		</div>
+		            
 
 			</footer>
 			<!-- /footer -->
 
-		</div>
-		<!-- /wrapper -->
+		<!-- analytics  -->
 
-		<!-- analytics & scripts -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<script>
 		(function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
 		(f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),

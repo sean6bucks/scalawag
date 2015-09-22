@@ -1,0 +1,6 @@
+.DS_Store
+
+wordpress/*
+!.gitignore
+!/wp-content/*
+/wp-content/uploads/*

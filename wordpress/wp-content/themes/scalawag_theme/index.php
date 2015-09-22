@@ -3,7 +3,7 @@
 <div id="jumbotron-wrapper">
     <!-- Grab featured posts and stack them -->
     <?php get_template_part('slideshow'); ?>
-    
+
 </div>
 
 <div id="pages-wrapper">
@@ -21,9 +21,7 @@
 <!-- TO BE REPLACED BY POST TEMPATE -->
 <div id="blog-wrapper">
 
-   <?php get_template_part('loop'); ?>
-
-   <?php get_template_part('pagination'); ?>
+    <?php get_template_part('loop'); ?>
 
 </div>
 

@@ -1,12 +1,12 @@
-<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+<?php query_posts('category_name=Words&showposts=4'); while (have_posts()) : the_post(); ?>
 
-	<div class="post-preview" id="post-<?php the_ID(); ?>">
+<div class="post-preview" id="post-<?php the_ID(); ?>">
     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
     
     <!-- post thumbnail -->
     <?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
         <div class="article-preview-image">
-            <?php the_post_thumbnail(array(700, 500)); // Declare pixel size you need inside the array ?>
+            <?php the_post_thumbnail(array(250, 250)); // Declare pixel size you need inside the array ?>
         </div>
     <?php else: ?>
         <div class="preview-image"></div>
@@ -28,16 +28,7 @@
     </div>
     </a>
 </div>
-	<!-- /article -->
 
 <?php endwhile; ?>
 
-<?php else: ?>
-
-	<!-- article -->
-	<article>
-		<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
-	</article>
-	<!-- /article -->
-
-<?php endif; ?>
+<?php wp_reset_query(); ?>

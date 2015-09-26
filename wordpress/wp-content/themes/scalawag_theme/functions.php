@@ -290,6 +290,21 @@ function enable_threaded_comments()
         }
     }
 }
+function exclude_post_categories($excl=''){
+    $categories = get_the_category($post->ID);
+    if(!empty($categories)){
+        $exclude=$excl;
+        $exclude = explode(",", $exclude);
+        foreach ($categories as $cat) {
+            $html = '';
+            if(!in_array($cat->cat_ID, $exclude)) {
+                $html .= '<a href="' . get_category_link($cat->cat_ID) . '" ';
+                $html .= 'title="' . $cat->cat_name . '">' . $cat->cat_name . '</a>';
+                echo $html;
+            }
+        }
+    }
+}
 
 // Custom Comments Callback
 function html5blankcomments($comment, $args, $depth)

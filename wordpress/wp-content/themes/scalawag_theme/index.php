@@ -17,17 +17,17 @@
 
 <div id="pages-wrapper">
     <a href="category/words/" ><div id="words" class="page">
-        <h3 class="page-title">Words</h3>
+        <h2 class="page-title">Words</h2>
     </div></a><!--
     --><a href="category/pictures/" ><div id="photos" class="page">
-        <h3 class="page-title">Pictures</h3>
+        <h2 class="page-title">Pictures</h2>
     </div></a><!--
     --><a href="category/films/" ><div id="films" class="page">
-        <h3 class="page-title">Films</h3>
+        <h2 class="page-title">Films</h2>
     </div></a>
 </div>
 
-<div class="latest-projects"><h5>Latest Projects</h5></div>
+<div class="latest-projects"><h3>Latest Projects</h3></div>
 <div id="blog-wrapper">
 
     <?php get_template_part('loop'); ?>

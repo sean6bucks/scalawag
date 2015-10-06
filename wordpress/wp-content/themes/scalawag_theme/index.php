@@ -19,7 +19,7 @@
     <a href="category/words/" ><div id="words" class="page">
         <h2 class="page-title">Words</h2>
     </div></a><!--
-    --><a href="category/pictures/" ><div id="photos" class="page">
+    --><a href="category/pictures/" ><div id="pictures" class="page">
         <h2 class="page-title">Pictures</h2>
     </div></a><!--
     --><a href="category/films/" ><div id="films" class="page">
@@ -27,7 +27,7 @@
     </div></a>
 </div>
 
-<div class="latest-projects"><h3>Latest Projects</h3></div>
+<div class="articles-headline"><h3>Latest Projects</h3></div>
 <div id="blog-wrapper">
 
     <?php get_template_part('loop'); ?>

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="articles-headline">
-    <h3 class="search-headline"><?php single_cat_title(); ?></h3>
+    <h3><?php single_cat_title(); ?></h3>
 </div>
 
 <div class="posts-wrapper">

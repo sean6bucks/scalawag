@@ -12,7 +12,8 @@
             <div class="article-preview-image" style="background-image: url('<?php echo $thumbnail; ?>');">
             </div>
         <?php else: ?>
-            <div class="preview-image"></div>
+            <div class="article-preview-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/footer_jack.png');">
+            </div>
         <?php endif; ?>
     </a>
     <!-- /post thumbnail -->

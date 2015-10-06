@@ -28,7 +28,7 @@
 </div>
 
 <div class="articles-headline"><h3>Latest Projects</h3></div>
-<div id="blog-wrapper">
+<div id="articles-wrapper">
 
     <?php get_template_part('loop'); ?>
     

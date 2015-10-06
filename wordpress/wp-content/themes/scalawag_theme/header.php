@@ -36,7 +36,8 @@
 			<!-- header -->
 			<header class="header clear" role="banner">
 				
-                <div id="header-logo"><img src="<?php echo get_template_directory_uri(); ?>/img/header_logo.png" alt="brothers scalawag header logo" />
+                <div id="header-logo">
+                    <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/img/header_logo.png" alt="brothers scalawag header logo" /></a>
                 </div>
 
                 <div id="searchbox"><?php get_search_form(); ?></div>

@@ -172,7 +172,7 @@ header {
 .search-submit {
 	height: 25px;
 	margin: 10px 0;
-	}
+}
 /* logo */
 .logo {
 
@@ -195,18 +195,30 @@ footer {
     clear: both;
     background: #F7F6F1;
     overflow: visible;
-    padding: 10px 50px;
 }
 
 #footer-body {
-	display: inline-block;
+	padding: 0px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: auto;
 }
 
-.about, .contact {
-	width: 25%;
-	margin: 25px 3% 10px 0;
+.about, .contact, #footer-icon {
 	display: inline-block;
 	vertical-align: top;
+}
+
+.about {
+    width: 50%;
+    padding: 25px 25px 10px 0;
+
+}
+
+.contact {
+    width: 20%;
+    padding: 25px 0 10px 0;
+    /*text-align: center;*/
 }
 
 .footer-title {
@@ -220,7 +232,13 @@ footer {
 
 #footer-icon {
 	padding: 10px 0;
-	display: inline-block;
+    /*height: 200px;*/
+    width: 30%;
+}
+
+#footer-icon img{
+    max-height: 150px;
+    min-height: 100%;
 }
 
 #site-wrapper {
@@ -229,6 +247,13 @@ footer {
     margin: 0 auto;
 }
 
+.clearfix:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
 
 /*------------------------------------*\
 	TYPOGRAPHY
@@ -443,22 +468,15 @@ blockquote p{
 }
 
 
-#words {
-    margin-right: 2.5%;
-}
-
-#pictures {
-    margin: 30px 2.5%;
-}
-
-#films {
-    margin-left: 2.5%;
+#words, #pictures {
+    margin-right: 5%;
 }
 
 /* LATEST ARTICLES */
 
 #articles-wrapper {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+    /*overflow: auto;*/
 }
 
 .articles-headline {
@@ -469,18 +487,19 @@ blockquote p{
 
 .post-preview {
     width: 23.5%;
-    height: 350px;
     margin-bottom: 15px;
+    margin-right: 2%;
     display: inline-block;
     float: left;
 }
 
-.post-preview:nth-child(2), .post-preview:nth-child(5) {
-	margin: 0 2% 15px 2%;
+.post-preview:nth-child(2), .post-preview:nth-child(6), .post-preview:last-child {
+	margin-right: 0;
 }
 
-.post-preview:first-child, .post-preview:last-child {
+.post-preview:first-child, .post-preview:nth-child(2) {
     width: 49%;
+    height: 300px;
 }
 
 .article-preview-image {
@@ -498,11 +517,6 @@ blockquote p{
     display: inline-block;
     vertical-align: top;
 
-}
-
-.post-preview:first-child .article-preview-body,
-.post-preview:last-child .article-preview-body {
-	height: 100px;
 }
 
 .article-preview-headline {
@@ -526,6 +540,21 @@ blockquote p{
 .article-preview-details {
 	margin: 5px 25px 0 0;
 	bottom: 10px;
+}
+
+.film-icon {
+    background: rgba(0,0,0,.75);
+    padding: 15px;
+    top: 62.5px;
+    border-radius: 50%;
+    width: 75px;
+    margin: 0 auto;
+    position: relative;
+    display: none;
+}
+
+.films-preview {
+    display: inherit;
 }
 
 /*---------------------------------*/
@@ -619,16 +648,192 @@ blockquote p{
 \*------------------------------------*/
 
 
-@media only screen and (min-width:320px) {
+@media only screen and (max-width:320px) {
 
 }
-@media only screen and (min-width:480px) {
+
+/*TABLET & MOBILE LANDSCAPE*/
+@media only screen and (max-width:768px) {
+
+    #site-wrapper {
+        padding: 0;
+    }
+
+    .post-preview, .post-preview:first-child, .post-preview:nth-child(2), .post-preview:nth-child(6) {
+        width: 50%;
+        min-height: 325px;
+        padding: 0 1%;
+        margin: 0;
+        display: block;
+        float: left;
+    }
+
+
+    #jumbotron-wrapper {
+        height: 300px;
+    }
+
+    .featured-post {
+        height: 300px;
+    }
 
 }
-@media only screen and (min-width:768px) {
 
+/*MOBILE*/
+@media only screen and (max-width:400px) {
+
+    #site-wrapper {
+        padding: 0;
+    }
+
+    .post-preview, .post-preview:first-child, .post-preview:nth-child(2), .post-preview:nth-child(6) {
+        width: 100%;
+        height: 300px;
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+        float: none;
+    }
+
+    .article-preview-body {
+        padding: 0 10px;
+    }
+
+    #jumbotron-wrapper {
+        height: 250px;
+    }
+
+    .featured-post {
+        height: 250px;
+    }
+
+    .featured-body {
+        height: 150px;
+        width: 100%;
+    }
+
+    .featured-headline {
+        font-size: 30px;
+        line-height: 25px;
+    }
+
+    .featured-body p {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .page {
+        width: 32%;
+        background: #000;
+        display: inline-block;
+        margin: 30px 0;
+        position: relative;
+    }
+
+    .page-title {
+        font-size: 20px;
+        color: #FFF;
+        line-height: 0px;
+        text-align: center;
+        margin: 33% auto; 
+    }
+
+    #words, #pictures {
+        margin-right: 2%;
+    }
+    
+    .search-post-preview {
+        width: 100%;
+        height: 350px;
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+        float: none;
+    }
+    
+    .text-wrapper {
+        width: 100%;
+    }
+
+    .text-wrapper p {
+        margin: 20px auto;
+        width: 80%;
+    }
+    
+    .text-wrapper iframe {
+        width: 100vw;
+        margin-left: -15%;
+    }
+
+    /*HEADER*/
+    header {
+        height: 100px;
+        margin: 5px;
+    }
+
+    #header-logo {
+        width: 100px;
+        margin: 5px auto;
+    }
+
+    #searchbox {
+        height: 40px;
+        width: 177px;
+        display: block;
+        position: inherit;
+        float: none;
+        margin: 5px auto;
+    }
+
+    .search {
+        height: 25px;
+        width: 100%;
+    }
+
+    .search-input{
+        display: inline-block;
+        width: 150px;
+        font-family: Helvetica, sans-serif;
+        font-size: 14px;
+        appearance: none;
+        box-shadow: none;
+        border-radius: none;
+        margin: 10px auto;
+        border: none;
+        border-bottom: solid 2px #EFEFEF;
+        transition: border 0.3s;
+        vertical-align: top;
+    }
+
+    .search-input:focus {
+        outline: none;
+        border-bottom: solid 2px #B3B3B3;
+    }
+
+    .search-submit {
+        height: 20px;
+        margin: 10px 0;
+    }
+
+    /*FOOTER*/
+
+    .about, .contact {
+        width: 90%;
+        margin: 15px auto 0 auto;
+        padding: 0;
+        display: block;
+        vertical-align: top;
+        float: none;
+        text-align: center;
+    }
+    #footer-icon {
+        height: 100px;
+        float: none;
+        margin: 15px auto;
+        display: block;
+    }
 }
-@media only screen and (min-width:1024px) {
+/*@media only screen and (min-width:1024px) {
 
 }
 @media only screen and (min-width:1140px) {
@@ -636,12 +841,12 @@ blockquote p{
 }
 @media only screen and (min-width:1280px) {
 
-}
+}*/
 
-@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+/*@media only screen and (-webkit-min-device-pixel-ratio:1.5),
 	   only screen and (min-resolution:144dpi) {
 
-}
+}*/
 
 /*------------------------------------*\
     MISC

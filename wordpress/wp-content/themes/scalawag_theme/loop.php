@@ -10,6 +10,9 @@
                 if ($thumbnail) (string)$thumbnail = $thumbnail[0];
             } ?>
             <div class="article-preview-image" style="background-image: url('<?php echo $thumbnail; ?>');">
+                <div class="film-icon <?php foreach( get_the_category() as $cat ) { echo $cat->slug . '-preview '; } ?>">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/icons/movie-icon.png" />
+                </div>
             </div>
         <?php else: ?>
             <div class="article-preview-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/footer_jack.png');">

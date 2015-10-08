@@ -12,11 +12,14 @@
 						<h4 class="footer-title">CONTACT US</h4>
 						<p class="footer-text">info@SCLWG.com<br>
 						---<br>
-						on Twitter<br>
-						on Facebook<br>
-						on Instagram</p>
+						<!-- TODO: fill in links -->
+						<a href="#">on Twitter</a><br>
+						<a href="#">on Facebook</a><br>
+						<a href="#">on Instagram</a></p>
 					</div><!--
-		  			--><img src="<?php echo get_template_directory_uri(); ?>/img/footer_jack.png" id="footer-icon" alt="brothers scalawag jackalope" />
+		        	--><div id="footer-icon" >
+		        		<img src="<?php echo get_template_directory_uri(); ?>/img/footer_jack.png" alt="brothers scalawag jackalope" />
+		        	</div>
 		  		</div>
 		            
 

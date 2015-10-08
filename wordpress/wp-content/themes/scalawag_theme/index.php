@@ -28,7 +28,7 @@
 </div>
 
 <div class="articles-headline"><h3>Latest Projects</h3></div>
-<div id="articles-wrapper">
+<div id="articles-wrapper" class="clearfix">
 
     <?php get_template_part('loop'); ?>
     

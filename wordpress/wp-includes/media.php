@@ -936,7 +936,7 @@ add_shortcode('gallery', 'gallery_shortcode');
  *                              Accepts any valid SQL ORDERBY statement.
  *     @type int    $id         Post ID.
  *     @type string $itemtag    HTML tag to use for each image in the gallery.
- *                              Default 'dl', or 'figure' when the theme registers HTML5 gallery support.
+ *                              Default 'ul', or 'figure' when the theme registers HTML5 gallery support.
  *     @type string $icontag    HTML tag to use for each image's icon.
  *                              Default 'dt', or 'div' when the theme registers HTML5 gallery support.
  *     @type string $captiontag HTML tag to use for each image's caption.
@@ -990,10 +990,10 @@ function gallery_shortcode( $attr ) {
 		'order'      => 'ASC',
 		'orderby'    => 'menu_order ID',
 		'id'         => $post ? $post->ID : 0,
-		'itemtag'    => $html5 ? 'figure'     : 'dl',
-		'icontag'    => $html5 ? 'div'        : 'dt',
-		'captiontag' => $html5 ? 'figcaption' : 'dd',
-		'columns'    => 3,
+		'itemtag'    => $html5 ? 'figure'     : 'div',
+		'icontag'    => $html5 ? 'div'        : 'div',
+		'captiontag' => $html5 ? 'figcaption' : 'figcaption',
+		'columns'    => 1,
 		'size'       => 'thumbnail',
 		'include'    => '',
 		'exclude'    => '',
@@ -1032,7 +1032,7 @@ function gallery_shortcode( $attr ) {
 	$icontag = tag_escape( $atts['icontag'] );
 	$valid_tags = wp_kses_allowed_html( 'post' );
 	if ( ! isset( $valid_tags[ $itemtag ] ) ) {
-		$itemtag = 'dl';
+		$itemtag = 'ul';
 	}
 	if ( ! isset( $valid_tags[ $captiontag ] ) ) {
 		$captiontag = 'dd';
@@ -1059,25 +1059,7 @@ function gallery_shortcode( $attr ) {
 	 *                    Otherwise, defaults to true.
 	 */
 	if ( apply_filters( 'use_default_gallery_style', ! $html5 ) ) {
-		$gallery_style = "
-		<style type='text/css'>
-			#{$selector} {
-				margin: auto;
-			}
-			#{$selector} .gallery-item {
-				float: {$float};
-				margin-top: 10px;
-				text-align: center;
-				width: {$itemwidth}%;
-			}
-			#{$selector} img {
-				border: 2px solid #cfcfcf;
-			}
-			#{$selector} .gallery-caption {
-				margin-left: 0;
-			}
-			/* see gallery_shortcode() in wp-includes/media.php */
-		</style>\n\t\t";
+		$gallery_style = "";
 	}
 
 	$size_class = sanitize_html_class( $atts['size'] );

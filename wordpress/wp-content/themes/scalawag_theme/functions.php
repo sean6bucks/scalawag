@@ -221,7 +221,7 @@ function html5wp_pagination()
 // Custom Excerpts
 function html5wp_index($length) // Create 30 Word Callback for Index page Excerpts, call using html5wp_excerpt('html5wp_index');
 {
-    return 20;
+    return 10;
 }
 
 // Create 40 Word Callback for Custom Post Excerpts, call using html5wp_excerpt('html5wp_custom_post');
@@ -279,6 +279,14 @@ function html5blankgravatar ($avatar_defaults)
     $myavatar = get_template_directory_uri() . '/img/gravatar.jpg';
     $avatar_defaults[$myavatar] = "Custom Gravatar";
     return $avatar_defaults;
+}
+
+// Remove IMG from P tags
+function filter_ptags_on_images($content){
+   return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+}
+function filter_ptags_on_embedded($content){
+   return preg_replace('/<p>\s*(<iframe .*<\/iframe>)?\s*<\/p>/iU', '\1\2\3', $content);
 }
 
 // Threaded Comments
@@ -395,7 +403,8 @@ add_filter('show_admin_bar', 'remove_admin_bar'); // Remove Admin bar
 add_filter('style_loader_tag', 'html5_style_remove'); // Remove 'text/css' from enqueued stylesheet
 add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to thumbnails
 add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to post images
-
+add_filter('the_content', 'filter_ptags_on_images');
+add_filter('the_content', 'filter_ptags_on_embedded');
 // Remove Filters
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether
 

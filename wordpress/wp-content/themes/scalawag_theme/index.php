@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-		
+
 <div id="jumbotron-wrapper">
     <!-- Grab featured posts and stack them -->
     <?php get_template_part( 'slideshow' ); ?>
@@ -14,15 +14,28 @@
     <a  class="arrow-next"><img src="<?php bloginfo('template_directory'); ?>/img/icons/arrow-next.png"></a>
 </div>
 
+<div id="index-min-wrapper">
+<div id="index-min-header">
+    <a href="<?php bloginfo('url'); ?>/category/words" ><div id="min-words" class="min-page">
+        <h2 class="min-title">Words</h2>
+    </div></a><!--
+    --><a href="<?php bloginfo('url'); ?>/category/pictures" ><div id="min-pictures" class="min-page">
+        <h2 class="min-title">Pictures</h2>
+    </div></a><!--
+    --><a href="<?php bloginfo('url'); ?>/category/films" ><div id="min-films" class="min-page">
+        <h2 class="min-title">Films</h2>
+    </div></a>
+</div>
+</div>
 
 <div id="pages-wrapper">
-    <a href="category/words/" ><div id="words" class="page">
+    <a href="<?php bloginfo('url'); ?>/category/words" ><div id="words" class="page">
         <h2 class="page-title">Words</h2>
     </div></a><!--
-    --><a href="category/pictures/" ><div id="pictures" class="page">
+    --><a href="<?php bloginfo('url'); ?>/category/pictures" ><div id="pictures" class="page">
         <h2 class="page-title">Pictures</h2>
     </div></a><!--
-    --><a href="category/films/" ><div id="films" class="page">
+    --><a href="<?php bloginfo('url'); ?>/category/films" ><div id="films" class="page">
         <h2 class="page-title">Films</h2>
     </div></a>
 </div>

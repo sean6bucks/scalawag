@@ -180,14 +180,6 @@ header {
 .logo-img {
 
 }
-/* nav */
-.nav {
-
-}
-/* sidebar */
-.sidebar {
-
-}
 
 /* footer */
 footer {
@@ -336,6 +328,75 @@ blockquote p{
 /*---------------------------------*/
 /*---------------------------------*/
 
+/* NAVBAR */
+#min-header {
+    height: 56px;
+    position: fixed;
+    top:0;
+    background: #fff;
+    z-index: 2;
+}
+
+/*HAMBURGER*/
+#hamburger {
+    display: inline-block;
+    width: 56px;
+    background: #fff;
+}
+
+#nav-toggle { position: absolute; right: 15px; top: 15px; }
+#nav-toggle { cursor: pointer; padding: 10px 35px 16px 0px; }
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 3px;
+  width: 42px;
+  background: #000;
+  position: absolute;
+  display: block;
+  content: '';
+}
+#nav-toggle span:before {
+  top: -12px; 
+}
+#nav-toggle span:after {
+  bottom: -12px;
+}
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  transition: all 50ms ease-in-out;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+.nav-items {
+    display: none;
+    text-align: center;
+    height: 56px;
+    width: 344px;
+    margin-right: 56px;
+}
+
+.nav-items li{
+    display: inline;
+}
+
+.nav-title {
+    display: inline-block;
+    color: #000;
+    line-height: 56px;
+    width: 32%;
+}
+
 /*JUMBOTRON SLIDER*/
 
 #jumbotron-wrapper {
@@ -467,9 +528,39 @@ blockquote p{
     margin: 33% auto; 
 }
 
-
 #words, #pictures {
     margin-right: 5%;
+}
+
+/* MIN CATEGORIES*/
+#index-min-wrapper {
+    display: none;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 0;
+    height: 56px;
+    position: fixed;
+    z-index: 2;
+}
+
+#index-min-header {
+    padding: 0 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.min-page {
+    background: #000;
+    width: 33.33%;
+    display: inline-block;
+    position: relative;
+}
+
+.min-title {
+    color: #FFF;
+    line-height: 56px;
+    text-align: center; 
 }
 
 /* LATEST ARTICLES */
@@ -565,6 +656,12 @@ blockquote p{
 /*---------------------------------*/
 .post-featured-image{
 	margin-bottom: 30px;
+    overflow: hidden;
+    max-height: 500px;
+}
+
+.post-featured-image img {
+    min-width: 100%;
 }
 
 .publish-information {
@@ -591,7 +688,7 @@ blockquote p{
 }
 
 .text-wrapper {
-	width: 60%;
+	width: 80%;
 	margin: 0 auto 40px auto;
 }
 
@@ -659,6 +756,10 @@ blockquote p{
         padding: 0;
     }
 
+    #index-min-header {
+        padding: 0;
+    }
+
     .post-preview, .post-preview:first-child, .post-preview:nth-child(2), .post-preview:nth-child(6) {
         width: 50%;
         min-height: 325px;
@@ -685,7 +786,47 @@ blockquote p{
     #site-wrapper {
         padding: 0;
     }
+    
+    /* NAVBAR */
+    #min-header {
+        height: 42px;
+    }
+    
+    #hamburger {
+        width: 42px;
+    }
 
+    #nav-toggle { position: absolute; right: 0px; top: 9px; }
+
+    #nav-toggle { cursor: pointer; padding: 10px 35px 16px 0px; }
+    #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+      height: 3px;
+      width: 28px;
+    }
+    #nav-toggle span:before {
+      top: -8px; 
+    }
+    #nav-toggle span:after {
+      bottom: -8px;
+    }
+
+    #nav-toggle.active span:before, #nav-toggle.active span:after {
+      top: 0;
+    }
+
+    .nav-items {
+        height: 42px;
+        width: 320px;
+        padding-right: 42px;
+        margin-right: 0;
+    }
+
+    .nav-title {
+        line-height: 42px;
+        font-size: 18px;
+    }
+    
+    /* POST PREVIEWS */
     .post-preview, .post-preview:first-child, .post-preview:nth-child(2), .post-preview:nth-child(6) {
         width: 100%;
         height: 300px;
@@ -732,8 +873,6 @@ blockquote p{
 
     .page-title {
         font-size: 20px;
-        color: #FFF;
-        line-height: 0px;
         text-align: center;
         margin: 33% auto; 
     }
@@ -741,7 +880,22 @@ blockquote p{
     #words, #pictures {
         margin-right: 2%;
     }
-    
+
+    /* MIN CATEGORIES*/
+    #index-min-wrapper {
+        height: 42px;
+    }
+
+    #index-min-header {
+        padding: 0;
+    }
+
+    .min-title {
+        font-size: 20px;
+        line-height: 42px;
+    }
+
+    /*SEARCH*/
     .search-post-preview {
         width: 100%;
         height: 350px;

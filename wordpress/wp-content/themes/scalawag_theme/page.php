@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+<?php get_template_part( 'minheader' ); ?>
 	<main role="main">
 		<!-- section -->
 		<section>

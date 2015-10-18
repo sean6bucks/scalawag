@@ -8,9 +8,12 @@
         } ?>
     <div class="featured-post slide" style="background-image: url('<?php echo $thumbnail; ?>');">
         <div class="featured-body">
-            <h1 class="featured-headline"><?php the_title(); ?></h1>
-            <?php html5wp_excerpt('html5wp_custom_post'); ?>
-            <div class="explore-box"><h4>Explore</h4></div>
+            <a href="<?php echo the_permalink(); ?>">
+                <h1 class="featured-headline"><?php the_title(); ?></h1>
+                <div class="explore-box">
+                        <h4>Explore</h4>
+                </div>
+            </a>
         </div>
     </div>
 <?php endif; ?>

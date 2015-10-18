@@ -314,6 +314,56 @@ function exclude_post_categories($excl=''){
     }
 }
 
+//CREATE GALLERY SLIDESHOW
+function pw_show_gallery_image_urls( $content ) {
+
+    global $post;
+
+    // Only do this on singular items
+    if( ! is_singular() )
+        return $content;
+
+    // Make sure the post has a gallery in it
+    if( ! has_shortcode( $post->post_content, 'gallery' ) )
+        return $content;
+
+    // Retrieve the first gallery in the post
+    $gallery = get_post_gallery_images( $post );
+
+    // Get post title
+    $title = get_the_title( $post );
+
+    $image_list = '<div id="image-gallery">';
+
+    // Loop through each image in each gallery
+    foreach( $gallery as $image_url ) {
+
+        $image_list .= '<a href="' . $image_url . '" style="background-image: url(' . $image_url . ');" class="gallery-image slide" data-lightbox="' . $title . '">' . '</a>';
+
+    }
+
+    $image_list .= '</div>';
+
+    $nav_bar = '<div class="gallery-nav"><div class="gallery-prev"> <img src="'. get_template_directory_uri() .'/img/icons/arrow-prev.png"> </div> <div class="slider-thumbs">';
+
+    $smallthumb = '';
+    if ( count($gallery) > 7 )
+        $smallthumb = "smallthumb";
+    // Loop through each image in each gallery
+    foreach( $gallery as $thumbnail ) {
+
+        $nav_bar .= '<div class="thumb ' . $smallthumb . '"> <img src="' . $thumbnail . '" alt="" title="' . $title . '"/></div>';
+
+    }
+
+    $nav_bar .= '</div> <div class="gallery-next"> <img src="'. get_template_directory_uri() .'/img/icons/arrow-next.png"> </div> </div>';
+
+    // Append our image list to the content of our post
+    $content .= $image_list . $nav_bar;
+
+    return $content;
+}
+
 // Custom Comments Callback
 function html5blankcomments($comment, $args, $depth)
 {
@@ -405,6 +455,7 @@ add_filter('post_thumbnail_html', 'remove_thumbnail_dimensions', 10); // Remove 
 add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to post images
 add_filter('the_content', 'filter_ptags_on_images');
 add_filter('the_content', 'filter_ptags_on_embedded');
+add_filter( 'the_content', 'pw_show_gallery_image_urls' );
 // Remove Filters
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether
 

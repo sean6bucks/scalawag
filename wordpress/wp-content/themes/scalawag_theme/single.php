@@ -20,14 +20,13 @@
 	<!-- post title -->
 	<div class="post-headline">
 		<h2><?php the_title(); ?></h2>
-		<h5 class="author"> <?php _e( 'By' ); ?> <?php the_author_posts_link(); ?></h5>
+		<h5 class="author"> <?php _e( 'by' ); ?> <?php the_author_posts_link(); ?></h5>
 	</div>
 	<!-- /post title -->
 	<!-- /post details -->
 	<div class="text-wrapper">
 		<?php the_content(); // Dynamic Content ?>
 		
-		<?php get_template_part( 'gallery' ); ?>
 	</div>
 	<div id="tags">
 	<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>

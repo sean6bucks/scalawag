@@ -1,19 +1,16 @@
 <?php get_header(); ?>
+<?php get_template_part( 'minheader' ); ?>
+    
+<div class="articles-headline">
+    <h3><?php _e( 'Posts Tagged "', 'html5blank' ); echo single_tag_title('', false); echo '"'; ?></h3>
+</div>
 
-	<main role="main">
-		<!-- section -->
-		<section>
+<div class="posts-wrapper">
 
-			<h1><?php _e( 'Tag Archive: ', 'html5blank' ); echo single_tag_title('', false); ?></h1>
+    <?php get_template_part('search-loop'); ?>
+    
+    <?php get_template_part('pagination'); ?>
 
-			<?php get_template_part('loop'); ?>
-
-			<?php get_template_part('pagination'); ?>
-
-		</section>
-		<!-- /section -->
-	</main>
-
-<?php get_sidebar(); ?>
+</div>
 
 <?php get_footer(); ?>

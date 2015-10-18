@@ -2,7 +2,7 @@
 <?php get_template_part( 'minheader' ); ?>
 	
 <div class="articles-headline">
-    <h3><?php _e( 'Author Archives for ', 'html5blank' ); echo get_the_author(); ?></h3>
+    <h3><?php _e( 'Posts by ', 'html5blank' ); echo get_the_author(); ?></h3>
 </div>
 
 <div class="posts-wrapper">

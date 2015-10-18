@@ -322,7 +322,7 @@ blockquote {
 
 /* NAVBAR */
 #min-header {
-    height: 56px;
+    height: 40px;
     position: fixed;
     top:0;
     background: rgba(256, 256, 256, 0.8);
@@ -332,27 +332,27 @@ blockquote {
 /*HAMBURGER*/
 #hamburger {
     display: inline-block;
-    width: 56px;
+    width: 46px;
     background: rgba(256, 256, 256, 0.8);
 }
 
 #nav-toggle { position: absolute; right: 15px; top: 15px; }
-#nav-toggle { cursor: pointer; padding: 10px 35px 16px 0px; }
+#nav-toggle { cursor: pointer; padding: 4px 23px 16px 0px; }
 #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
   cursor: pointer;
   border-radius: 1px;
   height: 3px;
-  width: 42px;
+  width: 30px;
   background: #000;
   position: absolute;
   display: block;
   content: '';
 }
 #nav-toggle span:before {
-  top: -12px; 
+  top: -10px; 
 }
 #nav-toggle span:after {
-  bottom: -12px;
+  bottom: -10px;
 }
 #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
   transition: all 50ms ease-in-out;
@@ -373,7 +373,7 @@ blockquote {
 .nav-items {
     display: none;
     text-align: center;
-    height: 56px;
+    height: 46px;
     width: 344px;
     margin-right: 56px;
 }
@@ -385,7 +385,7 @@ blockquote {
 .nav-title {
     display: inline-block;
     color: #000;
-    line-height: 56px;
+    line-height: 46px;
     width: 32%;
 }
 
@@ -514,11 +514,24 @@ blockquote {
     position: relative;
 }
 
+.page-image {
+    z-index: 1;
+    opacity: 1;
+}
+
 .page-title {
 	color: #FFF;
-    line-height: 0px;
+    width: 100%;
+    font-size: 30pt;
+    top: 45%;
+    position: absolute;
     text-align: center;
-    margin: 33% auto; 
+    z-index: 3;
+}
+
+.page:hover .page-image {
+    opacity: 0.25;
+    transition: opacity 0.5s ease-in-out;
 }
 
 #words, #pictures {
@@ -861,11 +874,6 @@ blockquote p{
     RESPONSIVE
 \*------------------------------------*/
 
-
-@media only screen and (max-width:320px) {
-
-}
-
 /*TABLET & MOBILE LANDSCAPE*/
 @media only screen and (max-width:768px) {
 
@@ -898,6 +906,11 @@ blockquote p{
     #image-gallery, #image-gallery a {
         height: 400px;
     }
+
+    .page-title {
+        font-size: 24pt;
+    }
+
 }
 
 /*MOBILE*/
@@ -982,6 +995,10 @@ blockquote p{
         font-size: 14pt;
         line-height: 16px;
     }*/
+    
+    #pages-wrapper {
+        margin-bottom: 20px;
+    }
 
     .page {
         width: 32%;
@@ -992,9 +1009,8 @@ blockquote p{
     }
 
     .page-title {
-        font-size: 18pt;
-        text-align: center;
-        margin: 33% auto; 
+        font-size: 14pt;
+        top: 40%;
     }
 
     #words, #pictures {
@@ -1002,7 +1018,7 @@ blockquote p{
     }
 
     /* MIN CATEGORIES*/
-    #index-min-wrapper {
+    /*#index-min-wrapper {
         height: 42px;
     }
 
@@ -1013,7 +1029,7 @@ blockquote p{
     .min-title {
         font-size: 18pt;
         line-height: 42px;
-    }
+    }*/
 
     /*SEARCH*/
     .search-post-preview {

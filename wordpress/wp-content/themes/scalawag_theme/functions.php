@@ -308,6 +308,8 @@ function exclude_post_categories($excl=''){
             if(!in_array($cat->cat_ID, $exclude)) {
                 $html .= '<a href="' . get_category_link($cat->cat_ID) . '" ';
                 $html .= 'title="' . $cat->cat_name . '">' . $cat->cat_name . '</a>';
+                if ( $cat != $categories[(count($categories) -1)] )
+                    $html .= ', ';
                 echo $html;
             }
         }

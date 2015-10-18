@@ -891,6 +891,9 @@ blockquote p{
         height: 300px;
     }
 
+    #image-gallery, #image-gallery a {
+        height: 400px;
+    }
 }
 
 /*MOBILE*/
@@ -1068,44 +1071,12 @@ blockquote p{
 
     #image-gallery {
         display: none;
-        /*position: relative;
-        width: 100%;
-        height: 516px;
-        margin-bottom: 20px;*/
     }
-
-    /*.gallery-image {
-        height: 516px;
-        max-width: 100%;
-        background: #000;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-    }*/
 
     .gallery-nav {
         display: none;
-        /*height: 50px;
-        margin-bottom: 20px;
-        vertical-align: bottom;*/
     }
 
-    /*.slider-thumbs {
-        display: inline;
-    }
-    .thumb {
-        display: inline-block;
-        opacity: 0.5;
-    }
-
-    .active-thumb{
-        opacity: 1;
-    }
-
-    .thumb img {
-        max-width: 75px;
-        height: 50px;
-    }*/
 
     /*HEADER*/
     header {

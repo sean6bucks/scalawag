@@ -783,6 +783,7 @@ blockquote p{
 .smallthumb {
     width: 5%;
     height: 23px;
+    margin-top: 2%;
 }
 
 .smallthumb img {
@@ -792,6 +793,7 @@ blockquote p{
 .gallery-prev, .gallery-next{
     display: inline-block;
     cursor: pointer;
+    margin-top: 2%;
 }
 
 .gallery-prev {

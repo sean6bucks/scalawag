@@ -719,6 +719,10 @@ blockquote p{
     color: #92AEB7;
 }
 
+.post-tags {
+    font-size: 12pt;
+}
+
 /* IMAGES & GALLERY*/
 /*---------------------------------*/
 

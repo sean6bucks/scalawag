@@ -26,10 +26,9 @@
 	<!-- /post details -->
 	<div class="text-wrapper">
 		<?php the_content(); // Dynamic Content ?>
-		
-	</div>
-	<div id="tags">
-	<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
+		<h5 class="post-tags">
+        <?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
+        </h5>
 	</div>
 
 </article>

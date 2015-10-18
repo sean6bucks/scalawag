@@ -305,17 +305,8 @@ p {
 
 blockquote {
 	width: 80%;
-	margin: 15px auto;
-}
-
-blockquote p{
-	font-family: "Old Standard TT", Times, serif;
-	font-size: 18pt;
-	line-height: 20pt;
-	font-weight: 300;
-	font-style: italic;
-	text-align: center;
-	color: #92AEB7;
+    min-width: 400px;
+	margin: 50px auto;
 }
 
 
@@ -418,7 +409,7 @@ blockquote p{
 }
 
 .featured-body {
-	height: 150px;
+	/*height: 100px;*/
 	width: 400px;
 	color: #FFF;
 	position: absolute;
@@ -427,18 +418,19 @@ blockquote p{
 }
 
 .featured-headline {
-	font-size: 32pt;
-    line-height: 35px;
-    margin: 0;
+	font-size: 34pt;
+    line-height: 32pt;
+    color: #fff;
+    margin: 0 0 40px 0;
 }
-
+/*
 .featured-body p {
 	font-size: 14pt;
 	line-height: 21px;
 	margin-bottom: 15px;
-	/*background: rgba( 0,0,0,0.25);*/
+	background: rgba( 0,0,0,0.25);
 	display: inline;
-}
+}*/
 
 .explore-box {
 	height: 40px;
@@ -470,13 +462,12 @@ blockquote p{
 /* slideshow nav bar */
 
 .slider-nav {
+    margin-top: 9px;
   text-align: center;
 }
 
 .arrow-prev, .arrow-next{
 	display: inline-block;
-	vertical-align: top;
-	margin-top: 9px;
 	cursor: pointer;
 }
 
@@ -491,10 +482,11 @@ blockquote p{
 }
 
 .slider-dots {
-  list-style: none;
-  display: inline-block;
-  padding-left: 0;
-  margin-bottom: 0;
+    height: 23px;
+    list-style: none;
+    display: inline-block;
+    padding-left: 0;
+    margin-bottom: 0;
 }
 
 .slider-dots li {
@@ -696,6 +688,7 @@ blockquote p{
 .text-wrapper {
 	width: 80%;
 	margin: 0 auto 40px auto;
+    clear: both;
 }
 
 .text-wrapper p {
@@ -708,11 +701,23 @@ blockquote p{
     padding-left: 20px;
 }
 
+.author {
+    font-size: 12pt;
+}
 .author a {
     font-style: normal;
-    color: #000;
-    font-size: 12pt;
+    font-family: "Apercu Bold", Helvetica, sans-serif;
     margin-left: 2px;
+}
+
+blockquote p{
+    font-family: "Old Standard TT", Times, serif;
+    font-size: 28pt !important;
+    line-height: 28pt !important;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+    color: #92AEB7;
 }
 
 /* IMAGES & GALLERY*/
@@ -743,20 +748,24 @@ blockquote p{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    border-radius: 5px;
 }
 
 .gallery-nav {
-    height: 50px;
-    margin-bottom: 20px;
-    vertical-align: bottom;
+    display: inline-block;
+    margin: 0 auto 20px auto;
+    width: 100%;
 }
 
 .slider-thumbs {
     display: inline;
+    margin: 0 auto;
 }
+
 .thumb {
     display: inline-block;
     opacity: 0.5;
+    width: 10%;
 }
 
 .active-thumb{
@@ -764,8 +773,32 @@ blockquote p{
 }
 
 .thumb img {
-    max-width: 75px;
-    height: 50px;
+    width: 100%;
+    max-height: 100%;
+}
+
+.smallthumb {
+    width: 5%;
+    height: 23px;
+}
+
+.smallthumb img {
+    min-height: 100%;
+}
+
+.gallery-prev, .gallery-next{
+    display: inline-block;
+    cursor: pointer;
+}
+
+.gallery-prev {
+  margin-right: 20px;
+  float: left;
+}
+
+.gallery-next {
+  margin-left: 20px;
+  float: right;
 }
 
 .fve-video-wrapper {
@@ -929,19 +962,19 @@ blockquote p{
     }
 
     .featured-body {
-        height: 150px;
+        /*height: 150px;*/
         width: 100%;
     }
 
     .featured-headline {
         font-size: 24pt;
-        line-height: 25px;
+        line-height: 22pt;
     }
 
-    .featured-body p {
+    /*.featured-body p {
         font-size: 14pt;
         line-height: 16px;
-    }
+    }*/
 
     .page {
         width: 32%;
@@ -987,15 +1020,6 @@ blockquote p{
     
     .text-wrapper {
         width: 100%;
-    }
-
-    .text-wrapper p p {
-        margin: 20px auto;
-        width: 80%;
-    }
-    
-    .text-wrapper {
-        width: 100%;
         margin: 0 auto 40px auto;
     }
 
@@ -1014,6 +1038,16 @@ blockquote p{
 
     .text-wrapper p::first-letter{
         padding-left: 20px;
+    }
+
+    blockquote {
+        width: 100%;
+        min-width: 0;
+    }
+
+    blockquote p {
+        font-size : 18pt !important;
+        line-height: 18pt !important;
     }
 
     /* IMAGE GALLERY */

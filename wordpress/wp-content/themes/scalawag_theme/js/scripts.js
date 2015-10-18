@@ -124,33 +124,33 @@ $(function () {
     }
 
     // MIN. DROP DOWN NAV WINDOW ON INDEX PAGE
-    if ( document.getElementById('pages-wrapper') ){
-        var pagesOffset = $('#pages-wrapper').offset(),
-            // GET ELEMENT BOTTOM VALUE BY ADDING HEIGHT MINUS LINE-HEIGHT
-            offsetBottom = pagesOffset.top + $('#pages-wrapper').height() - 56;
+    // if ( document.getElementById('pages-wrapper') ){
+    //     var pagesOffset = $('#pages-wrapper').offset(),
+    //         // GET ELEMENT BOTTOM VALUE BY ADDING HEIGHT MINUS LINE-HEIGHT
+    //         offsetBottom = pagesOffset.top + $('#pages-wrapper').height() - 56;
 
-        // SHOW NAV BAR ON PAGE LOAD IF BELOW PAGE CATEGORIES
-        if( $(document).scrollTop() > offsetBottom ) {
-            $('#index-min-wrapper').show();
-        }
+    //     // SHOW NAV BAR ON PAGE LOAD IF BELOW PAGE CATEGORIES
+    //     if( $(document).scrollTop() > offsetBottom ) {
+    //         $('#index-min-wrapper').show();
+    //     }
         
-        // RESET CATEGORIES OFFSET HEIGHT ON WINDOW RESIZE
-        $(window).resize( function() {
-            pagesOffset = $('#pages-wrapper').offset();
-            offsetBottom = pagesOffset.top + $('#pages-wrapper').height() - 56;
-        })
+    //     // RESET CATEGORIES OFFSET HEIGHT ON WINDOW RESIZE
+    //     $(window).resize( function() {
+    //         pagesOffset = $('#pages-wrapper').offset();
+    //         offsetBottom = pagesOffset.top + $('#pages-wrapper').height() - 56;
+    //     })
 
-        // DETECT IF PAGE IS SCROLLED BELOW PAGE CATEGORIES
-        // SHOW MIN. NAV BAR IF BELOW CATEGORIES
-        $(window).scroll(function(){
-            if( $(document).scrollTop() > offsetBottom ) {
-                $('#index-min-wrapper').slideDown(300);
-            } else {
-                $('#index-min-wrapper').slideUp(100);
-            }
+    //     // DETECT IF PAGE IS SCROLLED BELOW PAGE CATEGORIES
+    //     // SHOW MIN. NAV BAR IF BELOW CATEGORIES
+    //     $(window).scroll(function(){
+    //         if( $(document).scrollTop() > offsetBottom ) {
+    //             $('#index-min-wrapper').slideDown(300);
+    //         } else {
+    //             $('#index-min-wrapper').slideUp(100);
+    //         }
 
-        });
-    }
+    //     });
+    // }
 
     // ONLY ATTACH EVENT LISTENER IF NAV-TOGGLE IS PRESENT
     if ( document.getElementById('nav-toggle') ){

@@ -325,7 +325,7 @@ blockquote {
     height: 56px;
     position: fixed;
     top:0;
-    background: #fff;
+    background: rgba(256, 256, 256, 0.8);
     z-index: 2;
 }
 
@@ -333,7 +333,7 @@ blockquote {
 #hamburger {
     display: inline-block;
     width: 56px;
-    background: #fff;
+    background: rgba(256, 256, 256, 0.8);
 }
 
 #nav-toggle { position: absolute; right: 15px; top: 15px; }

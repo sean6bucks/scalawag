@@ -707,7 +707,6 @@ blockquote {
 .author a {
     font-style: normal;
     font-family: "Apercu Bold", Helvetica, sans-serif;
-    margin-left: 2px;
 }
 
 blockquote p{
@@ -838,7 +837,7 @@ blockquote p{
 	clear: both;
 	text-align: center;
 	font-size: 12pt;
-	padding-top: 20px;
+	padding-top: 10px;
 	margin-bottom: 40px;
 }
 

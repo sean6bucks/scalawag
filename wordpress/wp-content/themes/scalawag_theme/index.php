@@ -17,19 +17,22 @@
 
 <div id="pages-wrapper">
     <a href="<?php bloginfo('url'); ?>/category/words" ><div id="words" class="page">
-        <h2 class="page-title shade">WORDS</h2>
-        <h2 class="page-title">WORDS</h2>
+        <!-- <h2 class="page-title shade">WORDS</h2>
+        <h2 class="page-title">WORDS</h2> -->
         <img class="page-image" src="<?php bloginfo('template_directory'); ?>/img/cat-words.jpg" />
+        <img class="page-image-shaded" src="<?php bloginfo('template_directory'); ?>/img/cat-words-shade.jpg" />
     </div></a><!--
     --><a href="<?php bloginfo('url'); ?>/category/pictures" ><div id="pictures" class="page">
-        <h2 class="page-title shade">PICTURES</h2>
-        <h2 class="page-title">PICTURES</h2>
+        <!-- <h2 class="page-title shade">PICTURES</h2>
+        <h2 class="page-title">PICTURES</h2> -->
         <img class="page-image" src="<?php bloginfo('template_directory'); ?>/img/cat-pictures.jpg" />
+        <img class="page-image-shaded" src="<?php bloginfo('template_directory'); ?>/img/cat-pictures-shade.jpg" />
     </div></a><!--
     --><a href="<?php bloginfo('url'); ?>/category/films" ><div id="films" class="page">
-        <h2 class="page-title shade">FILMS</h2>
-        <h2 class="page-title">FILMS</h2>
+       <!--  <h2 class="page-title shade">FILMS</h2>
+        <h2 class="page-title">FILMS</h2> -->
         <img class="page-image" src="<?php bloginfo('template_directory'); ?>/img/cat-films.jpg" />
+        <img class="page-image-shaded" src="<?php bloginfo('template_directory'); ?>/img/cat-films-shade.jpg" />
     </div></a>
 </div>
 
